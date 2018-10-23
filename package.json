@@ -1,0 +1,25 @@
+{
+  "name": "happywallet",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "npm run test:unit && npm run unit_test:msg",
+    "test:unit": "node ./node_modules/mocha/bin/mocha ./test/unit_test.js",
+    "test:integration": "node ./node_modules/mocha/bin/mocha ./test/test.main.js",
+    "unit_test:msg": "printf '\\e[1;32m%-6s\\e[m' 'done unit testing....'",
+    "integra_test:msg": "printf '\\e[1;32m%-6s\\e[m' 'done integration testing....'"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "mocha": "^5.2.0",
+    "morgan": "~1.9.0",
+    "socket.io": "^2.1.1",
+    "supertest": "^3.3.0",
+    "swagger-ui-express": "^4.0.1"
+  }
+}
