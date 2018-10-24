@@ -10,7 +10,8 @@
     "unit_test:msg": "printf '\\e[1;32m%-6s\\e[m' 'done unit testing....'",
     "integra_test:msg": "printf '\\e[1;32m%-6s\\e[m' 'done integration testing....'",
     "test:coverage": "node ./node_modules/nyc/bin/nyc ./node_modules/mocha/bin/mocha ./test/test.main.js",
-    "eslint": "node node_modules/eslint/bin/eslint routes/*.js"
+    "eslint": "node node_modules/eslint/bin/eslint routes/*.js",
+    "mock" : "node ./node_modules/mocha/bin/mocha test/mock_test.js"
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -21,6 +22,7 @@
     "express": "~4.16.0",
     "mocha": "^5.2.0",
     "morgan": "~1.9.0",
+    "nock": "^10.0.1",
     "nyc": "^13.1.0",
     "socket.io": "^2.1.1",
     "supertest": "^3.3.0",
