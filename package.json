@@ -11,15 +11,17 @@
     "integra_test:msg": "printf '\\e[1;32m%-6s\\e[m' 'done integration testing....'",
     "test:coverage": "node ./node_modules/nyc/bin/nyc ./node_modules/mocha/bin/mocha ./test/test.main.js",
     "eslint": "node node_modules/eslint/bin/eslint routes/*.js",
-    "mock" : "node ./node_modules/mocha/bin/mocha test/mock_test.js"
+    "mock": "node ./node_modules/mocha/bin/mocha test/mock_test.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "chai": "^4.2.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
     "debug": "~2.6.9",
     "eslint": "^5.7.0",
     "express": "~4.16.0",
+    "gulp-mocha": "^6.0.0",
     "mocha": "^5.2.0",
     "morgan": "~1.9.0",
     "nock": "^10.0.1",
@@ -41,5 +43,8 @@
       "text",
       "text-summary"
     ]
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
