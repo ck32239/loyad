@@ -1,11 +1,14 @@
-let supertest=require('supertest');
-let api = supertest('https://api.github.com')
+const axios = require('axios');
+
+let api = axios.create({
+  baseURL:'https://api.github.com'
+});
 
 
 module.exports = {
-  getUser(username) {
+  getUser(user) {
     return api
-      .get('/users/octocat')
+      .get('/users/' + user)
       .then(res => res.data)
       .catch(error => console.log(error));
    }

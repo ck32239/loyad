@@ -21,6 +21,8 @@ describe('Starting Integration Tests', () => {
   })
 
   require('./integra_test.js')
+  require('./mock_test.js')
+
 
   after((done) => {
     console.log('\x1b[32m%s\x1b[0m', 'Close the server...')
